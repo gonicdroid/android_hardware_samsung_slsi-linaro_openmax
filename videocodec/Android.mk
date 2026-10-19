@@ -24,7 +24,7 @@ LOCAL_HEADER_LIBRARIES := media_plugin_headers
 endif
 
 LOCAL_CFLAGS += -DUSE_ANDROID
-ifeq ($(BOARD_USES_VENDORIMAGE), true)
+ifneq ($(TARGET_COPY_OUT_VENDOR),)
 LOCAL_PROPRIETARY_MODULE := true
 endif
 
